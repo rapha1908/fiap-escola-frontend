@@ -364,6 +364,33 @@ export default function Turma({ id, professor, turma }: Props) {
             </div>
           </div>
         );
+      case "aula":
+        return (
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h2 className="text-xl font-semibold mb-4">Descrição de Aula</h2>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Descreva o que foi ministrado nesta aula:
+                </label>
+                <textarea
+                  placeholder="Digite aqui a descrição da aula, conteúdo ministrado, atividades realizadas, observações importantes..."
+                  rows={12}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                />
+              </div>
+
+              <div className="flex gap-4">
+                <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">
+                  Salvar Descrição
+                </button>
+                <button className="bg-gray-500 text-white px-6 py-2 rounded-md hover:bg-gray-600">
+                  Limpar
+                </button>
+              </div>
+            </div>
+          </div>
+        );
       default:
         return null;
     }
